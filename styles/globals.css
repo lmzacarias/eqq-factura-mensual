@@ -14,7 +14,6 @@ a {
   box-sizing: border-box;
 }
 
-
 /* Tamaño del scroll */
 body::-webkit-scrollbar {
   width: 8px;
@@ -44,6 +43,12 @@ body:-webkit-scrollbar-track {
   background: #ececec;
   border-radius: 4px;
 }
+
+.principal {
+  height: calc(100% - 400px);
+  padding: 7%;
+}
+
 
 .component-flex {
   display: flex;
