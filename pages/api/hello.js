@@ -1,5 +1,31 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import axios from "axios";
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
-}
+// eslint-disable-next-line import/no-anonymous-default-export
+export default async (req, res) => {
+  console.log("LOG_1 ⚡", req.body);
+  const response = await axios({
+    url: process.env.URL_DATA,
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: {
+      cuentaContrato: process.env.CONTRATO,
+    },
+  });
+  console.log("LOG_4 ⚡", response);
+
+  if (!response.data) {
+    console.log("❌ Error getColors");
+    res.status(500).send({ message: "Error", status: 500 });
+    return;
+  }
+
+  console.log("🔴🔴", response.data);
+  const data = response.data;
+  res.status(200).send({
+    message: "OK",
+    data: { ...data },
+    status: 200,
+  });
+};

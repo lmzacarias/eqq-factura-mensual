@@ -1,7 +1,6 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
+  text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -13,4 +12,103 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+/* Tamaño del scroll */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* Estilos barra (thumb) de scroll */
+body::-webkit-scrollbar-thumb {
+  background: rgb(211, 211, 211);
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos track de scroll */
+body:-webkit-scrollbar-track {
+  background: #ececec;
+  border-radius: 4px;
+}
+
+.component-flex {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+}
+
+.component-50 {
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+}
+.component-50-grey {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: #f3f7f8;
+  border-radius: 7px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+}
+
+.margin-botton-none {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.aling-rigth {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  line-height: 30px;
+  align-items: flex-end;
+  width: 50%;
+}
+.aling-left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  line-height: 30px;
+  align-items: flex-start;
+  width: 50%;
+}
+.dos-columnas {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .component-flex {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+  }
+  .component-50-grey {
+    width: 100%;
+  }
+  .component-50 {
+    width: 100%;
+  }
 }
