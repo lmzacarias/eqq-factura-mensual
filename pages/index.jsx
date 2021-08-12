@@ -2,8 +2,8 @@ import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import DataViewer from "./components/DataViewer";
-import imgData from "../public/clock.svg";
-import Image from "next/image";
+/* import imgData from "../public/clock.svg";
+import Image from "next/image"; */
 
 export default function Home() {
   return (
