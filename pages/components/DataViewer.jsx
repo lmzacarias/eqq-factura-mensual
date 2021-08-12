@@ -6,9 +6,9 @@ import moment from "moment";
 
 const DataViewer = () => {
   const [dataServer, setDataServer] = useState(null);
-  function capitalize(string) {
+  /* function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-  }
+  } */
   const getData = async () => {
     try {
      
