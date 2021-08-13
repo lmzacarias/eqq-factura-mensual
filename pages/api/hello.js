@@ -3,6 +3,7 @@ import axios from "axios";
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
   //console.log("LOG_1 ⚡", req.body);
+  console.log("nuevo comment from github");
   console.log("Prueba desde github");
   const response = await axios({
     url: process.env.URL_DATA,
